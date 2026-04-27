@@ -1,4 +1,4 @@
-# ChatApp 🚀
+# StreamChat 🚀
 
 A real-time chat application built with the **MERN stack**, **Socket.io**, **TailwindCSS**, and **DaisyUI**. It features **JWT authentication and authorization**, **real-time messaging**, **online user status**, **Redis caching for messages**, **global state management using Zustand**, and robust **validation and error handling** at both the **data** and **API level**.  
 
