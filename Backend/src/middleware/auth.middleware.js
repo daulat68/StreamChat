@@ -3,6 +3,17 @@ import User from "../models/user.model.js"
 
 export const protectRoute= async (req, res, next) => {
     try {
+        console.log("----- NEW REQUEST -----");
+
+        console.log("HEADERS COOKIE:", req.headers.cookie);
+        console.log("COOKIES PARSED:", req.cookies);
+
+        console.log("JWT FROM COOKIES:", req.cookies?.jwt);
+
+        if (req.headers.cookie) {
+        const match = req.headers.cookie.match(/jwt=([^;]+)/);
+        console.log("JWT FROM RAW HEADER:", match ? match[1] : "NOT FOUND");
+        }
         const token = req.cookies.jwt
 
         if (!token) {
